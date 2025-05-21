@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+body {
+    font-family: 'Roboto Slab', serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 10px;
+}
+
+.title {
+    font-size: 10em;
+    line-height: 0.8;
+}
+
+.subtitle {
+    font-size: 5em;
+    line-height: 1;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: center;
+    padding: 1.5em;
+    width: 100%;
+}
+
+.dropdown .Select {
+    width: 80%;
+    min-width: 300px;
+}
+
+.graph {
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+.graph .js-plotly-plot {
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.social-icons img {
+    height: 40px;
+    margin: 0 10px;
+    transition: transform ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
