@@ -13,15 +13,28 @@ app = Dash(__name__)
 server = app.server
 
 app.layout = html.Div([
-    html.H4('2025 Midterm Election Analysis'),
-    html.P('Senator: '),
-    dcc.RadioItems(
-    id = 'senator',
-    options = senators_list,
-    value = senators_list[0],
-    inline = True
-    ),
-    dcc.Graph(id = 'graph'),
+
+    html.Div([
+        html.Div('2025', className = 'title'),
+        html.Div('Election Results', className = 'subtitle')],
+        className = 'header'),
+    
+    html.Div([
+        dcc.Dropdown(
+            id = 'senator',
+            options = senators_list,
+            value = senators_list[0])], 
+        className = 'dropdown'),
+
+    html.Div([
+        dcc.Graph(id = 'graph')],
+        className = 'graph'),
+    
+    html.Div([
+    html.A(html.Img(src='/assets/linkedin.png'), href='https://www.linkedin.com/in/jov-ivan-padilla/', target='_blank'),
+    html.A(html.Img(src='/assets/github.png'), href='https://github.com/ivan-padilla', target='_blank')], 
+    className='social-icons')
+
 ])
 
 @app.callback(
