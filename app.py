@@ -47,8 +47,3 @@ def display_choropleth(senator):
     )
 
     return fig
-
-if __name__ == "__main__":
-    app.run()
-
-server = app.server
