@@ -7,7 +7,7 @@ from dash import Dash, dcc, html, Input, Output
 
 regionalResults = pd.DataFrame(pd.read_csv('data/regionalResults.csv'))
 phRegions = json.load(open('data/regionalMap.json', 'r'))
-senators_list = regionalResults.columns[1: ].to_list()
+senators_list = regionalResults.columns[2: ].to_list()
 
 app = Dash(__name__)
 server = app.server
