@@ -16,6 +16,7 @@ body {
 .title {
     font-size: 10em;
     line-height: 0.8;
+    font-weight: bolder;
 }
 
 .subtitle {
