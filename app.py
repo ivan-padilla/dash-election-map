@@ -50,3 +50,5 @@ def display_choropleth(senator):
 
 if __name__ == "__main__":
     app.run()
+
+server = app.server
