@@ -31,7 +31,7 @@ app.layout = html.Div([
         className = 'graph'),
     
     html.Div([
-    html.A(html.Img(src='/assets/linkedin.png'), href='https://www.linkedin.com/in/jov-ivan-padilla/', target='_blank'),
+    html.A(html.Img(src='/assets/linkedIn.png'), href='https://www.linkedin.com/in/jov-ivan-padilla/', target='_blank'),
     html.A(html.Img(src='/assets/github.png'), href='https://github.com/ivan-padilla', target='_blank')], 
     className='social-icons')
 
