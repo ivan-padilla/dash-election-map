@@ -3,13 +3,14 @@ import plotly.express as px
 import plotly.io as pio
 import json
 from dash import Dash, dcc, html, Input, Output
-pio.renderers.default = 'browser'
+#pio.renderers.default = 'browser'
 
 regionalResults = pd.DataFrame(pd.read_csv('data/regionalResults.csv'))
 phRegions = json.load(open('data/regionalMap.json', 'r'))
 senators_list = regionalResults.columns[1: ].to_list()
 
 app = Dash(__name__)
+server = app.server
 
 app.layout = html.Div([
     html.H4('2025 Midterm Election Analysis'),
@@ -47,4 +48,5 @@ def display_choropleth(senator):
 
     return fig
 
-app.run(debug=True)
+if __name__ == "__main__":
+    app.run()
